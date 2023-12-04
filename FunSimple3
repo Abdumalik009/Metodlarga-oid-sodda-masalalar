@@ -1,0 +1,47 @@
+
+import java.util.Scanner;
+
+public class Metodlar {
+    public static int OrtaArifmetik(int a, int b) {
+        return (a + b) / 2;
+    }
+
+    public static int Geometrik(int a, int b) {
+        return (int) Math.sqrt(a * b);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("A ni kiriting: ");
+        int A = scanner.nextInt();
+
+        System.out.print("B ni kiriting: ");
+        int B = scanner.nextInt();
+
+        System.out.print("C ni kiriting: ");
+        int C = scanner.nextInt();
+
+        System.out.print("D ni kiriting: ");
+        int D = scanner.nextInt();
+
+
+
+        int AB= OrtaArifmetik(A, B);
+        int AD = OrtaArifmetik(A, D);
+        int AC = OrtaArifmetik(A, C);
+        int AD1 = Geometrik(A, B);
+        int AB1 = Geometrik(A, C);
+        int AC1 = Geometrik(A, C);
+
+
+
+        System.out.println("A, B orta arifmetigi: " + AB);
+        System.out.println("A, C  orta arifmetik: " + AC);
+        System.out.println("A, D  orta arifmetigi: " + AD);
+
+        System.out.println("A, D orta geometrigi: " + AD1);
+        System.out.println("A, B orta geometrigi: " + AB1);
+        System.out.println("A, C ortga geometrigi: " + AC1);
+    }
+}
