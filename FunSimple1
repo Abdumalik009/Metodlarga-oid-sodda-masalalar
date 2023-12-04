@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class FunSimple1 {
+    public static int powerA3(int number) {
+        return number * number * number;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("A : ");
+        int A = scanner.nextInt();
+
+        System.out.print("B : ");
+        int B = scanner.nextInt();
+
+        System.out.print("C : ");
+        int C = scanner.nextInt();
+
+        System.out.print("D : ");
+        int D = scanner.nextInt();
+
+        System.out.print("E : ");
+        int E = scanner.nextInt();
+
+
+
+        int resultA = powerA3(A);
+        int resultB = powerA3(B);
+        int resultC = powerA3(C);
+        int resultD = powerA3(D);
+        int resultE = powerA3(E);
+
+
+
+        System.out.println("A ning 3-darajasi: " + resultA);
+        System.out.println("B ning 3-darajasi: " + resultB);
+        System.out.println("C ning 3-darajasi: " + resultC);
+        System.out.println("D ning 3-darajasi: " + resultD);
+        System.out.println("E ning 3-darajasi: " + resultE);
+    }
+}
