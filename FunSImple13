@@ -1,0 +1,46 @@
+
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple13 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("A ni kiriting: ");
+            int a = scanner.nextInt();
+
+            System.out.print("B ni kiriting: ");
+            int b = scanner.nextInt();
+
+            System.out.print("C ni kiriting: ");
+            int c = scanner.nextInt();
+
+            int[] sortedNumbers = sortDec3(a, b, c);
+            System.out.println("Kamayish tartibida: " + sortedNumbers[0] + ", " + sortedNumbers[1] + ", " + sortedNumbers[2]);
+
+            scanner.close();
+        }
+
+        public static int[] sortDec3(int a, int b, int c) {
+            int[] sortedArray = new int[3];
+
+            if (a >= b && a >= c) {
+                sortedArray[0] = a;
+                sortedArray[1] = (b >= c) ? b : c;
+                sortedArray[2] = (b >= c) ? c : b;
+            } else if (b >= a && b >= c) {
+                sortedArray[0] = b;
+                sortedArray[1] = (a >= c) ? a : c;
+                sortedArray[2] = (a >= c) ? c : a;
+            } else {
+                sortedArray[0] = c;
+                sortedArray[1] = (a >= b) ? a : b;
+                sortedArray[2] = (a >= b) ? b : a;
+            }
+
+            return sortedArray;
+        }
+    }
+
+
