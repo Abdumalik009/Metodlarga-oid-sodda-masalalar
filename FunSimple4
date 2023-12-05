@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class FunSimple4 {
+    public static double calculateArea(double side) {
+        return side*side*side;
+    }
+
+    public static double calculatePerimeter(double side) {
+        return 3*side;
+
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Teng tomonni kiriting: ");
+        double sideLength = scanner.nextDouble();
+
+
+        double area = calculateArea(sideLength);
+        double perimeter = calculatePerimeter(sideLength);
+
+        System.out.println("Uchburchakning yuzasi: " + area);
+        System.out.println("Uchburchakning perimetri: " + perimeter);
+    }
+}
