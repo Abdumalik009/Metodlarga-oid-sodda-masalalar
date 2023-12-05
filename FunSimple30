@@ -1,0 +1,46 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple30 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Butun sonni kiriting (K > 0): ");
+            int k = scanner.nextInt();
+
+            System.out.print("Raqamni kiriting (N): ");
+            int n = scanner.nextInt();
+
+            int digitN = DigitN(k, n);
+
+            if (digitN < 0) {
+                System.out.println("K soni raqamlari N dan kichik.");
+            } else {
+                System.out.println(k + " sonining " + n + "-raqami: " + digitN);
+            }
+        }
+
+        static int DigitN(int K, int N) {
+            if (K <= 0 || N <= 0) {
+                System.out.println("Noto'g'ri sonlar kiritildi. K va N sonlari ham bo'lishi kerak.");
+                return -1;
+            }
+
+            int count = 0;
+            while (K > 0) {
+                count++;
+                int digit = K % 10;
+
+                if (count == N) {
+                    return digit;
+                }
+
+                K /= 10;
+            }
+
+            return -1; 
+        }
+    }
+
+
