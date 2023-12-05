@@ -1,0 +1,33 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple18 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Birinchi doira uchun radiusni kiriting: ");
+            double radius1 = scanner.nextDouble();
+
+            System.out.print("Ikkinchi doira uchun radiusni kiriting: ");
+            double radius2 = scanner.nextDouble();
+
+            System.out.print("Uchinchi doira uchun radiusni kiriting: ");
+            double radius3 = scanner.nextDouble();
+
+            double area1 = hisoblash(radius1);
+            double area2 = hisoblash(radius2);
+            double area3 = hisoblash(radius3);
+
+            System.out.println("Birinchi doira yuzi: " + area1);
+            System.out.println("Ikkinchi doira yuzi: " + area2);
+            System.out.println("Uchinchi doira yuzi: " + area3);
+        }
+
+        static double hisoblash(double radius) {
+            double pi = 3.1415;
+            return pi * radius * radius;
+        }
+    }
+
+
