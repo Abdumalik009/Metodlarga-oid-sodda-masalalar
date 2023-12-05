@@ -1,0 +1,39 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple27 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("K ni kiriting (K > 0): ");
+            int k = scanner.nextInt();
+
+            System.out.print("N ni kiriting (N > 0): ");
+            int n = scanner.nextInt();
+
+            boolean isPowerN = IsPowerN(k, n);
+
+            if (isPowerN) {
+                System.out.println(k + " soni " + n + " ning biror darajasi.");
+            } else {
+                System.out.println(k + " soni " + n + " ning darajasi emas.");
+            }
+        }
+
+        static boolean IsPowerN(int K, int N) {
+            if (K <= 0 || N <= 0) {
+                System.out.println("Noto'g'ri sonlar kiritildi. K va N sonlari ham bo'lishi kerak.");
+                return false;
+            }
+
+            int power = 1;
+            while (power < K) {
+                power *= N;
+            }
+
+            return power == K;
+        }
+    }
+
+
