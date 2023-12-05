@@ -1,0 +1,49 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple22 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("A ni kiriting: ");
+            double a = scanner.nextDouble();
+
+            System.out.print("B ni kiriting: ");
+            double b = scanner.nextDouble();
+
+            System.out.print("Amalni tanlang (1 - ayirish, 2 - ko'paytirish, 3 - bo'lish, 4 - qo'shish): ");
+            int operation = scanner.nextInt();
+
+            double result = Calc(a, b, operation);
+
+            System.out.println("Natija: " + result);
+        }
+
+        static double Calc(double A, double B, int Op) {
+            double result = 0;
+
+            switch (Op) {
+                case 1:
+                    result = A - B;
+                    break;
+                case 2:
+                    result = A * B;
+                    break;
+                case 3:
+                    if (B != 0) {
+                        result = A / B;
+                    } else {
+                        System.out.println("Bo'lish uchun B ni 0 ga tenglamang!");
+                    }
+                    break;
+                case 4:
+                    result = A + B;
+                    break;
+                default:
+                    System.out.println("Noto'g'ri amal tanlandi!");
+            }
+
+            return result;
+        }
+    }
