@@ -1,0 +1,36 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple26 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Butun sonni kiriting (K > 0): ");
+            int k = scanner.nextInt();
+
+            boolean isPower5 = IsPower5(k);
+
+            if (isPower5) {
+                System.out.println(k + " soni 5 ning biror darajasi.");
+            } else {
+                System.out.println(k + " soni 5 ning darajasi emas.");
+            }
+        }
+
+        static boolean IsPower5(int K) {
+            if (K <= 0) {
+                System.out.println("Noto'g'ri son kiritildi. K > 0 bo'lishi kerak.");
+                return false;
+            }
+
+            int power = 1;
+            while (power < K) {
+                power *= 5;
+            }
+
+            return power == K;
+        }
+    }
+
+
