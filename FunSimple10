@@ -1,0 +1,42 @@
+
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple10 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("A ni kiriting: ");
+            int a = scanner.nextInt();
+
+            System.out.print("B ni kiriting: ");
+            int b = scanner.nextInt();
+
+            System.out.print("C ni kiriting: ");
+            int c = scanner.nextInt();
+
+            System.out.print("D ni kiriting: ");
+            int d = scanner.nextInt();
+
+            swapValues(a, b, c, d);
+
+            scanner.close();
+        }
+
+        public static void swapValues(int a, int b, int c, int d) {
+            System.out.println("Avval: A=" + a + ", B=" + b + ", C=" + c + ", D=" + d);
+
+            int temp = a;
+            a = b;
+            b = temp;
+
+            temp = c;
+            c = d;
+            d = temp;
+
+            System.out.println("Keyin: A=" + a + ", B=" + b + ", C=" + c + ", D=" + d);
+        }
+    }
+
+
