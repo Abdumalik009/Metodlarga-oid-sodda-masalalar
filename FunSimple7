@@ -1,0 +1,38 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSImple7 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("a ni kiriting: ");
+            int a = scanner.nextInt();
+
+            System.out.print("b ni kiriting: ");
+            int b = scanner.nextInt();
+
+            System.out.print("c ni kiriting: ");
+            int c = scanner.nextInt();
+
+            invertAndPrintDigits(a);
+            invertAndPrintDigits(b);
+            invertAndPrintDigits(c);
+
+            scanner.close();
+        }
+
+        public static void invertAndPrintDigits(int number) {
+            System.out.print("Raqamlari teskari tartibda: ");
+
+            while (number != 0) {
+                int digit = number % 10;
+                System.out.print(digit);
+                number /= 10;
+            }
+
+            System.out.println(); 
+        }
+    }
+
+
