@@ -1,0 +1,33 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple29 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Butun sonni kiriting (K > 0): ");
+            int k = scanner.nextInt();
+
+            int digitCount = DigitCount(k);
+
+            System.out.println(k + " sonining raqamlari soni: " + digitCount);
+        }
+
+        static int DigitCount(int K) {
+            if (K <= 0) {
+                System.out.println("Noto'g'ri son kiritildi. K > 0 bo'lishi kerak.");
+                return -1;
+            }
+
+            int count = 0;
+            while (K > 0) {
+                K /= 10;
+                count++;
+            }
+
+            return count;
+        }
+    }
+
+
