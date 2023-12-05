@@ -1,0 +1,32 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple25 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Butun sonni kiriting (K > 0): ");
+            int k = scanner.nextInt();
+
+            boolean isSquare = IsSquare(k);
+
+            if (isSquare) {
+                System.out.println(k + " kvadrat son.");
+            } else {
+                System.out.println(k + " kvadrat son emas.");
+            }
+        }
+
+        static boolean IsSquare(int K) {
+            if (K <= 0) {
+                System.out.println("Noto'g'ri son kiritildi. K > 0 bo'lishi kerak.");
+                return false;
+            }
+
+            int sqrtK = (int) Math.sqrt(K);
+            return sqrtK * sqrtK == K;
+        }
+    }
+
+
