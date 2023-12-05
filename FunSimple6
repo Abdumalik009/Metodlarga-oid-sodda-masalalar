@@ -1,0 +1,47 @@
+package FunSimple;
+import java.util.Scanner;
+
+
+public class FunSimple6 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("a ni kiriting: ");
+            int a = scanner.nextInt();
+            System.out.print("b ni kiriting: ");
+            int b = scanner.nextInt();
+            System.out.print("c ni kiriting: ");
+            int c = scanner.nextInt();
+
+            int[] resultA = getDigitCountAndSum(a);
+            int[] resultB = getDigitCountAndSum(b);
+            int[] resultC = getDigitCountAndSum(c);
+
+            System.out.println("a sonining raqamlari soni: " + resultA[0]);
+            System.out.println("a sonining raqamlari yig'indisi: " + resultA[1]);
+
+            System.out.println("b sonining raqamlari soni: " + resultB[0]);
+            System.out.println("b sonining raqamlari yig'indisi: " + resultB[1]);
+
+            System.out.println("c sonining raqamlari soni: " + resultC[0]);
+            System.out.println("c sonining raqamlari yig'indisi: " + resultC[1]);
+
+            scanner.close();
+        }
+        public static int[] getDigitCountAndSum(int number) {
+            int digitCount = 0;
+            int digitSum = 0;
+
+            while (number != 0) {
+                int digit = number % 10;
+                digitCount++;
+                digitSum += digit;
+                number /= 10;
+            }
+
+            int[] result = {digitCount, digitSum};
+            return result;
+        }
+    }
+
