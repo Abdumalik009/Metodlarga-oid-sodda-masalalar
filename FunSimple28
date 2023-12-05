@@ -1,0 +1,37 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSImple28 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Butun sonni kiriting (N > 0): ");
+            int n = scanner.nextInt();
+
+            boolean isPrime = IsPrime(n);
+
+            if (isPrime) {
+                System.out.println(n + " tub son.");
+            } else {
+                System.out.println(n + " tub son emas.");
+            }
+        }
+
+        static boolean IsPrime(int N) {
+            if (N <= 1) {
+                System.out.println("Noto'g'ri son kiritildi. N > 0 bo'lishi kerak.");
+                return false;
+            }
+
+            for (int i = 2; i <= Math.sqrt(N); i++) {
+                if (N % i == 0) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    }
+
+
