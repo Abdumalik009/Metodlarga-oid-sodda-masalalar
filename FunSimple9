@@ -1,0 +1,28 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple9 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("K ni kiriting: ");
+            int k = scanner.nextInt();
+
+            System.out.print("R raqamini kiriting (1 <= R <= 9): ");
+            int r = scanner.nextInt();
+
+            
+            int result = addLeftDigit(k, r);
+            System.out.println("Natija: " + result);
+
+            scanner.close();
+        }
+
+        public static int addLeftDigit(int number, int digit) {
+            int sign = (number < 0) ? -1 : 1; 
+            return Integer.parseInt(String.valueOf(digit) + Math.abs(number)) * sign;
+        }
+    }
+
+
