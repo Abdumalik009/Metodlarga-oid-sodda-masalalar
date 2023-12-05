@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class RectPS {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Birinchi to'rtburchakni qarama uchlarini kiriting (x1 y1 x2 y2): ");
+        int x1 = scanner.nextInt();
+        int y1 = scanner.nextInt();
+        int x2 = scanner.nextInt();
+        int y2 = scanner.nextInt();
+
+        int area1 = getArea(x1, y1, x2, y2);
+        int perimeter1 = getPerimeter(x1, y1, x2, y2);
+
+        System.out.print("Ikkinchi to'rtburchakni qarama uchlarini kiriting (x1 y1 x2 y2): ");
+        int x3 = scanner.nextInt();
+        int y3 = scanner.nextInt();
+        int x4 = scanner.nextInt();
+        int y4 = scanner.nextInt();
+
+        int area2 = getArea(x3, y3, x4, y4);
+        int perimeter2 = getPerimeter(x3, y3, x4, y4);
+
+        System.out.println("Birinchi to'rtburchak yuzi: " + area1);
+        System.out.println("Birinchi to'rtburchak perimetri: " + perimeter1);
+        System.out.println("Ikkinchi to'rtburchak yuzi: " + area2);
+        System.out.println("Ikkinchi to'rtburchak perimetri: " + perimeter2);
+
+        scanner.close();
+    }
+
+    public static int getArea(int x1, int y1, int x2, int y2) {
+        int length = Math.abs(x2 - x1);
+        int width = Math.abs(y2 - y1);
+        return length * width;
+    }
+
+    public static int getPerimeter(int x1, int y1, int x2, int y2) {
+        int length = Math.abs(x2 - x1);
+        int width = Math.abs(y2 - y1);
+        return 2 * (length + width);
+    }
+}
