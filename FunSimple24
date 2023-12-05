@@ -1,0 +1,26 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple24 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Butun sonni kiriting: ");
+            int k = scanner.nextInt();
+
+            boolean isEven = Even(k);
+
+            if (isEven) {
+                System.out.println(k + " juft son.");
+            } else {
+                System.out.println(k + " toq son.");
+            }
+        }
+
+        static boolean Even(int K) {
+            return K % 2 == 0;
+        }
+    }
+
+
