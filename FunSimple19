@@ -1,0 +1,29 @@
+package FunSimple;
+import java.util.Scanner;
+
+public class FunSimple19 {
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Birinchi aylananing radiusini kiriting (R1): ");
+            double r1 = scanner.nextDouble();
+
+            System.out.print("Ikkinchi aylananing radiusini kiriting (R2): ");
+            double r2 = scanner.nextDouble();
+
+            double ringArea = ringS(r1, r2);
+
+            System.out.println("Aylanalar ustma-ust kesishmagan qismi yuzasi: " + ringArea);
+        }
+
+        static double ringS(double R1, double R2) {
+            double pi = 3.1415;
+            double area1 = pi * R1 * R1;
+            double area2 = pi * R2 * R2;
+
+            return Math.abs(area1 - area2); 
+        }
+    }
+
+
